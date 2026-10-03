@@ -1,0 +1,13 @@
+{
+  "name": "ai-notice-action-assistant-root",
+  "version": "1.0.0",
+  "description": "AI Notice Action Assistant - Full-Stack MERN Project built to exact SRS specification",
+  "scripts": {
+    "dev": "node -e \"const { spawn } = require('child_process'); const s = spawn('npm', ['run', 'dev'], { cwd: 'server', stdio: 'inherit', shell: true }); const c = spawn('npm', ['run', 'dev'], { cwd: 'client', stdio: 'inherit', shell: true }); process.on('SIGINT', () => { s.kill(); c.kill(); process.exit(); });\"",
+    "start": "npm run dev",
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client"
+  }
+}
